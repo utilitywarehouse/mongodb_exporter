@@ -6,7 +6,7 @@ RUN go get github.com/percona/mongodb_exporter/...
 
 WORKDIR /go/src/github.com/percona/mongodb_exporter
 
-RUN git checkout v0.6.3
+RUN git checkout v0.10.0
 
 RUN make build
 
