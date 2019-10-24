@@ -12,6 +12,6 @@ RUN make build
 
 FROM alpine:latest
 RUN apk add --no-cache ca-certificates && mkdir /app
-COPY --from=build /go/src/github.com/percona/mongodb_exporter/mongodb_exporter /app/mongodb_exporter
+COPY --from=build /go/src/github.com/percona/mongodb_exporter/bin/mongodb_exporter /app/mongodb_exporter
 
 ENTRYPOINT /app/mongodb_exporter
